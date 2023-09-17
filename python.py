@@ -51,25 +51,51 @@
 
 # Car Game
 
-start = True
-stop = True
-quit = False
+# while(True):
+#     command = input("> ").lower()
+
+#     if command == "help":
+#         print('''start - to start the car
+# stop - to stop the car
+# quit - to exit''')
+#     elif command == "start":
+#         print("Car started...")
+#         start = False
+#     elif command == "stop":
+#         print("Car has stopped")
+#         stop = False
+#     elif command == "quit":
+#         print("exiting.....")
+#         break
+#     elif command != "help":
+#         print("I don't understand that...")
+
+# car game with improvements
+
+started = False
 while(True):
-    command = input()
+    command = input("> ").lower()
 
     if command == "help":
         print('''start - to start the car
 stop - to stop the car
 quit - to exit''')
     elif command == "start":
-        print("Car is running...")
-        start = False
+        if started:
+            print("Car is already started...")
+        else:
+            started = True
+            print("Car started...")
     elif command == "stop":
-        print("Car has stopped")
-        stop = False
+        if not started:
+            print("Car has already stopped")
+        else:
+            started = False
+            print("Car stopped")
     elif command == "quit":
         print("exiting.....")
         break
     elif command != "help":
         print("I don't understand that...")
+
 
