@@ -108,9 +108,17 @@
 # print(f" Total = {cost}")
 
 # largest number in a list
-numbers = [1,23,3,64,35,56,7,8,12,10]
-largest_number = 1
-for num in numbers:
-    if num > largest_number:
-        largest_number=num
-print("Largest Number is ", largest_number)
+# numbers = [1,23,3,64,35,56,7,8,12,10]
+# largest_number = 1
+# for num in numbers:
+#     if num > largest_number:
+#         largest_number=num
+# print("Largest Number is ", largest_number)
+
+# removing duplicates in a list
+numbers = [1,2,2,3,4,5,5,4,4,6,8,8,9,9,9]
+newlist=[] #new empty list
+for i in range (len(numbers)):
+    if numbers[i] not in newlist :
+        newlist.append(numbers[i])
+print ("The unique values are: ", newlist)
