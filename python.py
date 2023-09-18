@@ -116,9 +116,17 @@
 # print("Largest Number is ", largest_number)
 
 # removing duplicates in a list
-numbers = [1,2,2,3,4,5,5,4,4,6,8,8,9,9,9]
-newlist=[] #new empty list
-for i in range (len(numbers)):
-    if numbers[i] not in newlist :
-        newlist.append(numbers[i])
-print ("The unique values are: ", newlist)
+# numbers = [1,2,2,3,4,5,5,4,4,6,8,8,9,9,9]
+# newlist=[] #new empty list
+# for i in range (len(numbers)):
+#     if numbers[i] not in newlist :
+#         newlist.append(numbers[i])
+# print ("The unique values are: ", newlist)
+
+# phone-number dictionary
+phoneBook = {"1":"One", '2':"Two", '3':"Three", '4':"Four", '5':"Five", '6':"Six", '7':"Seven", '8':"Eight", '9':"Nine", '0':"Zero" }
+number  = input("Phone ")
+output = ""
+for digit in number:
+    output = phoneBook.get(digit, "!")
+    print(output, end = " ")
