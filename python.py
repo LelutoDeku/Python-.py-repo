@@ -131,17 +131,96 @@
 #     output = phoneBook.get(digit, "!")
 #     print(output, end = " ")
 
-def emoji_converter(msg):
-    words = msg.split()
-    emojis = {
-        ":)" : "😃",
-        ":(" : "🙁"
-    }
-    output = ""
-    for word in words:
-        output += emojis.get(word, word)
-    return output
+# def emoji_converter(msg):
+#     words = msg.split()
+#     emojis = {
+#         ":)" : "😃",
+#         ":(" : "🙁"
+#     }
+#     output = ""
+#     for word in words:
+#         output += emojis.get(word, word)
+#     return output
 
 
-msg = input("> ")
-print(emoji_converter(msg))
+# msg = input("> ")
+# print(emoji_converter(msg))
+
+#classes in python
+# class Point:
+# 	def __init__(self, x, y):# __ => private function member, self => current object, __init__() : is a constructor
+# 		self.x = x
+# 		self.y = y
+# 	def move(self):
+# 		print("MOVE")
+# 	def draw(self):
+# 		print("draw")
+
+
+# point = Point(10,20)
+# print(point.x)
+
+# class Person:
+# 	def __init__(self, name):
+# 		self.name = name
+# 	def talk(self):
+# 		print(f" Hi, I am {self.name}") # refers to current object's 'name' attribute
+
+
+# john = Person("John Smith")
+# # print(john.name)
+# john.talk()
+
+# bob = Person("Bob Jean")
+# bob.talk()
+
+
+#inheritance
+
+# class Mammal:
+# 	def walk(self):
+# 		print("walk")
+
+
+# class Dog(Mammal):
+# 	pass	#do nothing, empty class can't be defind
+
+
+# class Cat(Mammal):
+# 	def meow(self):
+# 		print("Meow")
+
+# dog1 = Dog()
+# dog1.walk()
+# cat1=Cat()
+# cat1.walk()
+# cat1.meow()
+
+
+# modules =>
+# use code of a python file in another python file by using 'import' 
+# keyword with filename, thereby allowing you to use the methods that it contains
+# ways of importing :
+# 1. import <moduleName>
+# 2. from moduleName import * (not recommended as its not clear which method is being imported and also makes debugging difficult )
+# 3. from moduleName import specificFunction (can be selected by ctrl+space)
+# importing packages works the same way, packages => collection of modules
+# from ecommerce import shipping : where ecommerce is package name and shipping is the module 
+# which acts like an object we can use (.) operator to access all functions available in shipping module
+
+#  random module
+import random
+
+for i in range(3):
+	print(random.random()) #any random value -> integer, float etc.
+	print(random.randint(10, 20))
+
+
+# dice roll
+class Dice:
+	def roll(self):
+		roll = (random.randint(1,6), random.randint(1,6))
+		return roll
+	
+dice = Dice()
+print(dice.roll())
