@@ -225,3 +225,14 @@ class Dice:
 	
 dice = Dice()
 print(dice.roll())
+
+# files and directories
+
+from pathlib import Path
+
+path = Path() #path can be absolute/relative, here no args => current dir
+# path = Path("emails")
+# print(path.mkdir()) # will make a dir named 'emails' in current path and return value 'None'
+# print(path.rmdir()) # will remove 'emails' dir from the current path
+for file in path.glob("*.py"): # path.glob() works on regex to search for files and directories in current path, * => all files+directories; *.* => only files with all extensions not directories; *.py => all files with extension .py but not directories
+	print(file)
