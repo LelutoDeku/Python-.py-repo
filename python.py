@@ -209,14 +209,15 @@
 # which acts like an object we can use (.) operator to access all functions available in shipping module
 
 #  random module
-import random
+# import random
 
-for i in range(3):
-	print(random.random()) #any random value -> integer, float etc.
-	print(random.randint(10, 20))
+# for i in range(3):
+# 	print(random.random()) #any random value -> integer, float etc.
+# 	print(random.randint(10, 20))
 
 
 # dice roll
+import random
 class Dice:
 	def roll(self):
 		roll = (random.randint(1,6), random.randint(1,6))
