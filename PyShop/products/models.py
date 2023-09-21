@@ -12,6 +12,6 @@ class Product(models.Model):
 
 
 class Offer(models.Model):
-	code = models.TextField(max_length=30)
-	descritption = models.TextField(max_length=100)
+	code = models.TextField(max_length=10)
+	description = models.TextField(max_length=255)
 	discount = models.FloatField()
